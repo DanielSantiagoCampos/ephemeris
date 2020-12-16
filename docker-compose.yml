@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web:
+    working_dir: /ephemeris
+    build: .
+    volumes:
+      - "./:/ephemeris"
+    command: "bin/rails s puma -b '0.0.0.0' -p 3000"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    links:
+      - db:db
+  db:
+    image: postgres:9.6
+    volumes:
+      - "./.data/postgres:/var/lib/postgresql/data"
