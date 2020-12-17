@@ -12,7 +12,6 @@ EADME
 - `sudo docker-compose run web bundle install`
 - `sudo docker-compose run web bin/rake db:create`
 - `sudo docker-compose run web bin/rake db:migrate`
-- `sudo docker-compose run web bin/rake db < backup_development.sql`
 - `sudo docker-compose up`
 
 ### See exercise
