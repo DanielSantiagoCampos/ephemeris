@@ -15,7 +15,7 @@ EADME
 - `sudo docker-compose run web bin/rake db < backup_development.sql`
 - `sudo docker-compose up`
 
-### See first exercise
+### See exercise
 
 - Please open [project](http://localhost:3000/) and navigate.
 - Check, `app/views/ && app/controllers`
