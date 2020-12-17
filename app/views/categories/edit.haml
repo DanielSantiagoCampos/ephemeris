@@ -1,0 +1,10 @@
+=link_to("Back", categories_path)
+
+= simple_form_for @category, url: category_path(@category.id) do |f|
+
+  %h1= "Update category"
+
+  = f.input :description, value: @category.description, label: "Description"
+  = f.input :id, input_html: { type: "hidden", value: @category.id }, label: false
+
+  = f.button :submit, 'Save'

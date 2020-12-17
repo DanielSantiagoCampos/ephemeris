@@ -1,24 +1,27 @@
-# README
+EADME
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Steps
 
-Things you may want to cover:
+### Clone repository
 
-* Ruby version
+`git clone git@github.com:DanielSantiagoCampos/technical_test.git`
 
-* System dependencies
+### Prepare project to up
 
-* Configuration
+- `sudo docker-compose run web gem install bundler`
+- `sudo docker-compose run web bundle install`
+- `sudo docker-compose run web bin/rake db:create`
+- `sudo docker-compose run web bin/rake db:migrate`
+- `sudo docker-compose run web bin/rake db < backup_development.sql`
+- `sudo docker-compose up`
 
-* Database creation
+### See first exercise
 
-* Database initialization
+- Please open [project](http://localhost:3000/) and navigate.
+- Check, `app/views/ && app/controllers`
 
-* How to run the test suite
+## References
+- https://guides.rubyonrails.org/
+- https://github.com/julianvargasalvarez/tailung
+- https://docs.docker.com/compose/rails/
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

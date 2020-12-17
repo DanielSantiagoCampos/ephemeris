@@ -1,0 +1,7 @@
+%p Welcome to events
+
+%div
+  =link_to("Create events",     new_ephemery_path )
+  =link_to("Manage Categories", categories_path )
+
+=render "ephemeries/ephemeries_list", ephemeries: @ephemeries

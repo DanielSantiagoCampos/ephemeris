@@ -13,6 +13,8 @@ services:
     links:
       - db:db
   db:
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
     image: postgres:9.6
     volumes:
       - "./.data/postgres:/var/lib/postgresql/data"

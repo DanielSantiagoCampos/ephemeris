@@ -1,0 +1,7 @@
+- ephemeries.each do |ephemery|
+  %div
+    %hr
+    =link_to("#{ephemery.text}", ephemery_path(ephemery.id))
+    %p=ephemery.category_description
+    %p=ephemery.ephemer_date.strftime("%F")
+    %img{src: ephemery.image, style: "height: 200px"}

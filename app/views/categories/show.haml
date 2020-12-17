@@ -1,0 +1,6 @@
+%div
+  =link_to("Go Back", root_path)
+  =link_to("Edit Category", edit_category_path(@category.id))
+
+%div
+  %h1=@category.description

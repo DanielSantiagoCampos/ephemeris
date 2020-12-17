@@ -1,0 +1,10 @@
+%div
+  =link_to("Go Back", root_path)
+  %br
+  =link_to("Create category", new_category_path)
+  %br
+
+- categories.each do |category|
+  %div{style: "padding-top: 20px;"}
+    =link_to("#{category.description}", category_path(category.id))
+    %hr

@@ -1,0 +1,9 @@
+%div
+  =link_to("Go Back", root_path)
+  =link_to("Edit event", edit_ephemery_path(@ephemery.id))
+
+%div
+  %h1=@ephemery.text
+  %p=@ephemery.category_description
+  %p=@ephemery.ephemer_date.strftime("%F")
+  %img{src: @ephemery.image, style: "height: 200px"}

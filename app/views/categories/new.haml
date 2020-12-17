@@ -1,0 +1,9 @@
+=link_to("Go Back", categories_path)
+
+= simple_form_for "category", url: categories_path do |f|
+
+  %h1= "Create category"
+
+  = f.input :description, label: "Description"
+
+  = f.button :submit, 'Save'

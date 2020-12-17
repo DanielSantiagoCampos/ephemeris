@@ -1,0 +1,12 @@
+=link_to("Go Back", root_path)
+
+= simple_form_for "ephemery", url: ephemeries_path do |f|
+
+  %h1= "Create event"
+
+  = f.input :text, label: "Text of event"
+  = f.input :ephemer_date, as: :date, order: [:day, :month, :year], label: "Date of event", html5: true
+  = f.input :category_id, collection: Category.pluck(:id, :description), value_method: :first, label_method: :second, as: :select, label: "Select one category"
+  = f.input :image, label: "Enter a static url image"
+
+  = f.button :submit, 'Save'
